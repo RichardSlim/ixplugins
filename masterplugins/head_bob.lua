@@ -1,15 +1,11 @@
 
-PLUGIN.name = "Head Bob"
-PLUGIN.author = "kurozael & LegAz"
-PLUGIN.description = "Head bobbing cutten from the Clockwork framework."
+PLUGIN.name = "Clockbob"
+PLUGIN.author = "Mags"
+PLUGIN.description = "Head Bobbing!"
 
 ix.lang.AddTable("english", {
 	optHeadBobSacle = "Head bob scale",
-	optdHeadBobSacle = "How much intensive the head bobs.",
-})
-ix.lang.AddTable("russian", {
-	optHeadBobSacle = "Интенсивность покачивания головы",
-	optdHeadBobSacle = "Насколько более или менее интенсивно покачивание головы.",
+	optdHeadBobSacle = "How much volume should be scaled.",
 })
 
 if (CLIENT) then
@@ -21,7 +17,7 @@ if (CLIENT) then
 	local mathClamp = math.Clamp
 
 	ix.option.Add("headBobSacle", ix.type.number, 1, {
-		category = "general", min = 0, max = 1, decimals = 1
+		category = "general", min = 0, max = 2, decimals = 1
 	})
 
 	local function CanDoHeadBob(client)
@@ -35,19 +31,6 @@ if (CLIENT) then
 		) then
 			return false
 		end
-
-	--[[
-		-- Tactial Leaning addon has compatibility issue
-		if (client.TFALean) then
-			if (bSecondEnterence == 1) then
-				bSecondEnterence = 0
-
-				return false
-			end
-
-			bSecondEnterence = 1
-		end
-	]]
 
 		return true
 	end
