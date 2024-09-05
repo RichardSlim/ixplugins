@@ -27,7 +27,7 @@ function ix.currency.Spawn(pos, amount, angle)
     money:SetAngles(angle or angle_zero)
 
     -- This input will make it so that anything above 20 tokens will make it a different model. You can edit the variable.
-    if (amount > 20) then
+    if (amount >=20) then
         money:SetModel("models/props_c17/BriefCase001a.mdl") -- Larger amount, so different model.
     else
         money:SetModel("models/props_lab/box01a.mdl") -- Default model for smaller amounts.
