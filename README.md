@@ -2,4 +2,4 @@
 
 ![Currency Model Preview](https://files.catbox.moe/gxwga7.png)
 
-This Garry's Mod plugin enhances the currency system for the Helix framework in HL2RP by introducing dynamic currency models based on the amount of money...
+Changes the models up. 20 or greater than is a different model. everything below that also has a diffent model.
