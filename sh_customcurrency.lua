@@ -13,7 +13,7 @@ function ix.currency.Spawn(pos, amount, angle)
     local money = ents.Create("ix_money")
     money:Spawn()
 
-    -- Make sure the position is valid, either dropped by a player or a specific map position.
+-- Debugging, dont worry about this unless you know what it means.
     if (IsValid(pos) and pos:IsPlayer()) then
         pos = pos:GetItemDropPos(money)
     elseif (!isvector(pos)) then
